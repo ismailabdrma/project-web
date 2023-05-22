@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - Car Dealership</title>
+  <style>
+    /* CSS styles for the layout */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000080;
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      background-color: #0000CD;
+      padding: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #main-content {
+      margin: 20px;
+      color: #fff;
+    }
+
+    #add-car-form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #add-car-form input[type="text"],
+    #add-car-form input[type="number"],
+    #add-car-form input[type="file"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    #add-car-form input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Motoma - Admin Panel</h1>
+    <nav id="menu">
+      <a href="index.html">Back to Main Page</a>
+    </nav>
+  </header>
+
+  <div id="main-content">
+    <h2>Add New Car</h2>
+    <form id="add-car-form">
+      <label for="brand">Brand:</label>
+      <input type="text" id="brand" required>
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" required>
+
+      <label for="km">KM:</label>
+      <input type="number" id="km" required>
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" required>
+
+      <label for="photo">Photo:</label>
+      <input type="file" id="photo" accept="image/*" required>
+
+      <input type="submit" value="Add Car">
+    </form>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
