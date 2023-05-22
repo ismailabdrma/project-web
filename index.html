@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Dealership</title>
+  <style>
+    /* CSS styles for the layout */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000080;
+      font-family: Arial, sans-serif;
+    }
+
+    #header {
+      background-color: #0000CD;
+      padding: 10px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #main-content {
+      margin: 20px;
+    }
+
+    #menu {
+      display: flex;
+    }
+
+    #menu a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin-right: 10px;
+      transition: filter 0.3s;
+    }
+
+    #menu a:hover {
+      filter: blur(2px);
+    }
+
+    /* CSS styles for the search panel */
+    #search-panel {
+      margin-bottom: 20px;
+    }
+
+    #search-panel label {
+      display: block;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    #search-panel input[type="text"],
+    #search-panel input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    #search-panel input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    /* CSS styles for the car list */
+    #car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .car-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    .car-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <h1>Motoma</h1>
+    <nav id="menu">
+      <a href="#" id="search-link">Search</a>
+      <a href="admin.html" id="admin-link">Admin</a>
+    </nav>
+  </header>
+
+  <div id="main-content">
+    <div id="search-panel">
+      <h2>Search Panel</h2>
+      <form id="search-form">
+        <label for="brand-search">Brand:</label>
+        <input type="text" id="brand-search">
+
+        <label for="price-search">Price (max):</label>
+        <input type="number" id="price-search">
+
+        <input type="submit" value="Search">
+      </form>
+    </div>
+
+    <div id="car-list"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
